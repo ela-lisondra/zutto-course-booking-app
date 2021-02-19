@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+// import App.css
+// import './App.css'
+
+
+// Components
+import Home from'./pages/home'
+import Banner from './components/Banner'
+import Highlights from './components/Highlights'
+import NavBar from './components/NavBar'
+import {Container} from 'react-bootstrap'
+
+export default function App(){
+
+/*
+  Fragment <></> is a React provided element wrapper.
+*/
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <NavBar />
+      <Container>
+        <Home />
+      </Container>
+    </>
+    )
 
-export default App;
+}
