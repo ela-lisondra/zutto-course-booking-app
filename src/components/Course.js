@@ -2,10 +2,10 @@ import React from 'react'
 
 import {Card, Row, Col} from 'react-bootstrap'
 
-export default function Course({dataProp}){
-	console.log(dataProp)
+export default function Course({courseProp}){
+	console.log(courseProp)
 
-	const {name,description,price} = dataProp
+	const {name,description,price} = courseProp
 
 	console.log(name)
 	console.log(description)
@@ -14,7 +14,7 @@ export default function Course({dataProp}){
 	return (
 			<>
 				<Row>
-					<Col xs={12} md={4}>
+					<Col>
 						<Card className="Course">
 							<Card.Body>
 								<Card.Title>
