@@ -2,7 +2,14 @@ import React from 'react'
 
 import {Card, Row, Col} from 'react-bootstrap'
 
-export default function Course(){
+export default function Course({dataProp}){
+	console.log(dataProp)
+
+	const {name,description,price} = dataProp
+
+	console.log(name)
+	console.log(description)
+	console.log(price)
 
 	return (
 			<>
@@ -11,14 +18,14 @@ export default function Course(){
 						<Card className="Course">
 							<Card.Body>
 								<Card.Title>
-									<h2>HTML</h2>
+									<h2>{name}</h2>
 								</Card.Title>
 								<Card.Text>
-									lorem	ipsum sojfosjvksdnvisejpfjaepnvfa;pednp;enpankidven fjoiefj jfepsj fpje pojf ejfposjefo sopef jopej fpoj fpj pojf
+									{description}
 								</Card.Text>
 
 								<Card.Text>
-									P 1000
+									{price}
 								</Card.Text>
 							</Card.Body>
 						</Card>

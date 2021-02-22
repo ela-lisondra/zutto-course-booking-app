@@ -1,0 +1,129 @@
+NOTE:
+
+Important steps in every component:
+    import React from 'react'
+    import {components} from 'react-bootstrap'
+
+    export default function <componentName> () {
+      
+        return(
+
+              <>
+               //html//
+              </>
+        )   
+    }
+
+**App.js
+    import <componentName> from './components/<componentName>'
+    //add the component name in the function of App.js
+
+    export default function App(){
+
+      return (
+          <>
+              <NavBar />
+              <Banner />
+              <Highlights />
+              <Course />
+
+          </>
+        )
+
+    }
+
+    //import css in index.js:
+    import './App.css'
+    
+    
+    
+    
+****index.js*****
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css'
+//bootstrap comes first to css so templates will be followed to bootstrap
+
+//import css
+import './App.css'
+
+ReactDOM.render(
+	<App />,
+  document.getElementById('root2')
+);
+//ReactDOM.render(element,container) **accepts 2 arguments**
+
+
+
+
+*****STEP BY STEP PROCEDURE******
+
+1. create folder
+2. npx create-react-app react-booking
+
+3. bash from react-booking > npm install (for clone)
+
+3.1. npx create-react-app react-booking (for permanent)
+
+4. keep: 
+        App.css
+        App.js
+        index.js
+        logo.svg
+        setupTests.js
+5. bash on react-booking:
+				npm start
+        
+6. index.js:
+        Let/const
+
+        ReactDOM.render(
+          <VariableName> example:
+          <App /> or <Banner />  or <NavBar />
+        **should be inside one parent div/element
+
+         document.getElementById('root')
+        );
+
+or 
+
+      export default function App(){
+
+        return (
+          <>
+                 <NavBar />
+                 <Banner />
+                 <NavBar />
+                 <Banner />
+          </>
+          )
+
+      }
+
+7. import React from 'react'
+
+8.  npm install react-bootstrap bootstrap
+
+9. index.js:
+ import 'bootstrap/dist/css/bootstrap.min.css'
+ 
+9.1. how to import a component from react-bootstrap:
+import{Navbar} from 'react-bootstrap'
+
+**NavBar
+Navbar - nav element w/ proper classes
+Navbar.Brand - anchor tag
+Navbar.Toggle - button
+Navbar.Collapse. div w/ appropriate classes
+Nav- div w/ class navbar-nav
+
+**Banner
+Row - div element w/ class row
+Col - div element w/ class col
+Jumbotron - div element w/ class jumbotron
+
+className - allows to add a class to a component or element in JSX
+
+
