@@ -24,9 +24,14 @@ export default function Register() {
 		setEmail("")
 		setPassword("")
 
-		alert("You have successfully logged in!")
-	}
-    localStorage.setItem("email",email)
+        Swal.fire({
+			icon:"success",
+			title: "Successfully Logged in.",
+			text: "Thank you for Logging in to Zuitt Booking System!"
+        })
+    }
+        localStorage.getItem("email", email)
+
 	return (
 			<>
 				<h1 className="text-center">Login</h1>
