@@ -21,34 +21,12 @@ let data2 = {
 	motto: "Easy Breezy."
 }
 
-let course1 = {
-
-	name: "HTML",
-	description: "lorem	ipsum sojfosjvksdnvisejpfjaepnvfa;pednp;enpankidven fjoiefj jfepsj fpje pojf ejfposjefo sopef jopej fpoj fpj pojf",
-	price: "P 1000"
-}
-
-let course2 = {
-
-	name: "CSS",
-	description: "lorem	ipsum sojfosjvksdnvisejpfjaepnvfa;pednp;enpankidven fjoiefj jfepsj fpje pojf ejfposjefo sopef jopej fpoj fpj pojf",
-	price: "P 2000"
-}
-
-let course3 = {
-
-	name: "JS",
-	description: "lorem	ipsum sojfosjvksdnvisejpfjaepnvfa;pednp;enpankidven fjoiefj jfepsj fpje pojf ejfposjefo sopef jopej fpoj fpj pojf",
-	price: "P 3000"
-}
 
   return (
     <>
       <Banner dataProp={data2}/>
       <Highlights />
-      <Course courseProp={course1}/>
-      <Course courseProp={course2}/>
-      <Course courseProp={course3}/>
+      
     </>
     )
 

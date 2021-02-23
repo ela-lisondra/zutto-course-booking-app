@@ -7,6 +7,10 @@ import React from 'react'
 // Components
 import Home from'./pages/home'
 import NavBar from './components/NavBar'
+import Courses from './pages/courses'
+import Register from './pages/register'
+import Login from './pages/login'
+
 import {Container} from 'react-bootstrap'
 
 export default function App(){
@@ -20,7 +24,7 @@ export default function App(){
     <>
       <NavBar />
       <Container>
-        <Home />
+         <Login />
       </Container>
     </>
     )
