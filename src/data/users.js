@@ -2,14 +2,14 @@ export default [
 
 	{
 
-		username: "admin",
+		email: "admin@mail.com",
 		password: "admin123",
 		isAdmin: true
 
 	},
 	{
 
-		username: "john_doe",
+		email: "johnDLC@mail.com",
 		password: "john123",
 		isAdmin: false
 

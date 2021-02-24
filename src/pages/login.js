@@ -1,13 +1,19 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import {Form, Button} from "react-bootstrap"
 import Swal from "sweetalert2"
 
-export default function Register() {
+import {Redirect} from 'react-router-dom'
+import users from '../data/users'
 
+import UserContext from '../userContext'
+export default function Login() {
+	const {user, setUser} = useContext(UserContext)
+	console.log(user)
 
 	const [email,setEmail] = useState("")
 	const [password, setPassword] = useState("")
 	const [isActive, setIsActive] = useState(true)
+	const [willRedirect, setWillRedirect] = useState(false)
 
 	useEffect(() =>{
 
@@ -21,19 +27,47 @@ export default function Register() {
 	
 	function loginUser(e){
 		e.preventDefault()
-		setEmail("")
-		setPassword("")
-
-        Swal.fire({
-			icon:"success",
-			title: "Successfully Logged in.",
-			text: "Thank you for Logging in to Zuitt Booking System!"
+        
+        const match = users.find(user => {
+            
+        
+            return (user.email === email && user.password === password)
         })
-    }
-        localStorage.getItem("email", email)
 
+    //    console.log(match) 
+        if(match) {
+
+            localStorage.setItem("email", email)
+			localStorage.setItem("isAdmin", match.isAdmin)
+			setUser ({
+				email:email,
+				isAdmin: match.isAdmin
+			})
+			setWillRedirect(true)
+            Swal.fire({
+                icon:"success",
+                title: "Successfully Logged in.",
+                text: "Thank you for Logging in to Zuitt Booking System!"
+            })
+        } else {
+            Swal.fire({
+                icon:"error",
+                title: "Log In Unsuccessful.",
+                text: "User Credentials are Wrong."
+            })
+        }
+        
+        setEmail("")
+        setPassword("")
+	
+    }
 	return (
+		willRedirect
+		?
+		<Redirect to="/" />
+		:
 			<>
+				
 				<h1 className="text-center">Login</h1>
 				<Form onSubmit={e => loginUser(e)}>					
 					
@@ -61,4 +95,5 @@ export default function Register() {
 					}
                 </Form>
 			</>
-	)}
+	)
+}

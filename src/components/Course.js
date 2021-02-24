@@ -3,7 +3,7 @@ import React,{useState, useEffect} from 'react'
 import {Card, Row, Col, Button} from 'react-bootstrap'
 
 export default function Course({courseProp}){
-	console.log(courseProp)
+	// console.log(courseProp)
 
 	const {name,description,price} = courseProp
 

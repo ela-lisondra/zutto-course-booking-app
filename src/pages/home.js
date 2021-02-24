@@ -1,34 +1,37 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Banner from './../components/Banner'
 import Highlights from './../components/Highlights'
 import Course from './../components/Course'
+import UserContext from '../userContext'
 
-export default function home(){
+export default function Home(){
 
-
-let data = {
-
-	title: "Zuitt Coding Bootcamp",
-	description: "A cost-efficient coding bootcamp.",
-	motto: "Opportunities for Everyone. Everywhere."
-}
+  const {user,setUser} = useContext(UserContext)
 
 
-let data2 = {
+  let data = {
 
-	title: "Zuitter Booking System",
-	description: "A cost-efficient booking system.",
-	motto: "Easy Breezy."
-}
+      title: "Zuitt Coding Bootcamp",
+      description: "A cost-efficient coding bootcamp.",
+      motto: "Opportunities for Everyone. Everywhere."
+  }
 
 
-  return (
-    <>
-      <Banner dataProp={data2}/>
-      <Highlights />
-      
-    </>
-    )
+  let data2 = {
 
-}
+      title: "Zuitter Booking System",
+      description: "A cost-efficient booking system.",
+      motto: "Easy Breezy."
+  }
+
+
+    return (
+      <>
+        <Banner dataProp={data2}/>
+        <Highlights />
+        
+      </>
+      )
+
+  }
 

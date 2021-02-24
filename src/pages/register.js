@@ -1,8 +1,12 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import {Form, Button} from "react-bootstrap"
 import Swal from 'sweetalert2'
 
+import UserContext from '../userContext'
 export default function Register() {
+
+
+	console.log(useContext(UserContext))
 
 	const [firstName, setFirstName] = useState("")
 	const [lastName,setLastName] = useState("")
@@ -21,7 +25,7 @@ export default function Register() {
 		}else {
 			setIsActive(false)
 		}
-
+		
 	},[firstName, lastName, email, mobileNo, password1, password2])
 	
 	function registerUser(e){
