@@ -21,7 +21,9 @@ export default function Home(){
 
       title: "Zuitter Booking System",
       description: "A cost-efficient booking system.",
-      motto: "Easy Breezy."
+      motto: "Easy Breezy.",
+      destination: "/courses",
+      label: "Enroll Now!"
   }
 
 

@@ -15,7 +15,7 @@ export default [
 		name: "Python-Django",
 		description: "lorem ipsumDolor sint id reprehenderit cillum dolore ullamco qui proident non magna consequat in.",
 		price: 50000,
-		onOffer: true
+		onOffer: false
 
 	},
 

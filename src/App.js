@@ -12,6 +12,7 @@ import Register from './pages/register'
 import Login from './pages/login'
 import Logout from './pages/logout'
 import CreateCourse from './pages/createCourse'
+import ErrorPage from './pages/errorPage'
 
 import {Container} from 'react-bootstrap'
 
@@ -53,7 +54,7 @@ const unsetUser = () => {
             <Route exact path="/login" component={Login}/>
             <Route exact path="/register" component={Register}/>
             <Route exact path="/logout" component={Logout}/>
-         
+            <Route component={ErrorPage} />
           </Switch>
           </Container>
         </Router>
