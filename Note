@@ -126,4 +126,12 @@ Jumbotron - div element w/ class jumbotron
 
 className - allows to add a class to a component or element in JSX
 
+ e.target.value IS THE VALUE OF INPUT
+onChange IS NEEDED TO BE ABLE TO INPUT DATA
+value={courseName} IS A BIND */ 
 
+<Form onSubmit={e => addCourse(e)}>
+
+import {Link} from 'react-router-dom'
+
+import userContext from '../userContext'

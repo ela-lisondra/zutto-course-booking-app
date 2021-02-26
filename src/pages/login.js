@@ -8,7 +8,7 @@ import users from '../data/users'
 import UserContext from '../userContext'
 export default function Login() {
 	const {user, setUser} = useContext(UserContext)
-	console.log(user)
+	// console.log(user)
 
 	const [email,setEmail] = useState("")
 	const [password, setPassword] = useState("")
@@ -34,7 +34,7 @@ export default function Login() {
             return (user.email === email && user.password === password)
         })
 
-    //    console.log(match) 
+       console.log(match) 
         if(match) {
 
             localStorage.setItem("email", email)

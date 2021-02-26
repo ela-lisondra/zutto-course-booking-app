@@ -31,17 +31,19 @@ export default function Courses(){
 	 })
 
 	 console.log(courses)
-
+	//  why course? it's the parameter of the map
 	 const coursesDashboard = coursesData.map(course=>{
-		
+		console.log(course)
 		return (
 				<tr key={course.id}>
 					<td>{course.name}</td>
 					<td>{course.price}</td>
 					<td>{course.onOffer ? "active" : "inactive"}</td>
+					<td>{course.startDate}</td>
+					<td>{course.endDate}</td>
 					<td>
-						<Button variant="warning" className="mx-3" >Delete</Button>
-	 				 	<Button variant="danger" className="mx-3" >Edit</Button>
+						<Button variant="warning" className="mr-3" >Delete</Button>
+	 				 	<Button variant="danger" className="ml-1" >Edit</Button>
 					</td>
 				</tr>	
 			)
@@ -59,6 +61,8 @@ export default function Courses(){
 						<th>Name</th>
 						<th>Price</th>
 						<th>Status</th>
+						<th>Start Date</th>
+						<th>End Date</th>	
 						<th>Actions</th>
 					</tr>
 				</thead>

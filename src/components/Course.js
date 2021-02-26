@@ -3,9 +3,9 @@ import React,{useState, useEffect} from 'react'
 import {Card, Row, Col, Button} from 'react-bootstrap'
 
 export default function Course({courseProp}){
-	// console.log(courseProp)
+	console.log(courseProp)
 
-	const {name,description,price} = courseProp
+	const {name,description,price, startDate, endDate} = courseProp
 
 	// useState syntax
 	const [count,setCount] = useState(0)
@@ -65,6 +65,14 @@ export default function Course({courseProp}){
 										? "No more seats available."
 										: seats 
 									}
+								</Card.Text>
+
+								<Card.Text>
+									Start Date: {startDate}
+								</Card.Text>
+
+								<Card.Text>
+									End Date: {endDate}
 								</Card.Text>
 
 							</Card.Body>

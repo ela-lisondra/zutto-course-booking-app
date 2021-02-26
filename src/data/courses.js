@@ -6,7 +6,9 @@ export default [
 		name: "PHP-Laravel",
 		description: "lorem ipsumDolor sint id reprehenderit cillum dolore ullamco qui proident non magna consequat in.",
 		price: 45000,
-		onOffer: true
+		onOffer: true,
+		startDate: "2020-12-15",
+		endDate: "2021-2-15"
 
 	},
 	{
@@ -15,7 +17,9 @@ export default [
 		name: "Python-Django",
 		description: "lorem ipsumDolor sint id reprehenderit cillum dolore ullamco qui proident non magna consequat in.",
 		price: 50000,
-		onOffer: false
+		onOffer: false,
+		startDate: "2020-1-15",
+		endDate: "2021-3-15"
 
 	},
 
@@ -25,7 +29,9 @@ export default [
 		name: "Java-Springboot",
 		description: "lorem ipsumDolor sint id reprehenderit cillum dolore ullamco qui proident non magna consequat in.",
 		price: 55000,
-		onOffer: true
+		onOffer: true,
+		startDate: "2021-2-26",
+		endDate: "2021-3-26"
 
 	}
 ]

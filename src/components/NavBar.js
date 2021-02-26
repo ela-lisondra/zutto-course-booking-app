@@ -35,10 +35,14 @@ export default function NavBar(){
 							?
 								<>
 									<Nav.Link href="/courses/create">Create</Nav.Link>
-									<Nav.Link href="/logout" >Logout</Nav.Link>
+									<Nav.Link href="/logout">Logout</Nav.Link>
+									<Nav.Link href="/profilePage">Profile</Nav.Link>
 								</>
 								:
-								<Nav.Link href="/logout" >Logout</Nav.Link>
+								<>
+									<Nav.Link href="/logout" >Logout</Nav.Link>
+									<Nav.Link href="/profilePage">Profile</Nav.Link>
+								</>
 					
 						:
 						<>
